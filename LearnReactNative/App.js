@@ -1,20 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {SafeAreaView, View, Text} from 'react-native';
+import Greeting from './components/Greeting';
+import Box from './components/Box';
+import Input from './components/Input';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <View>
-        <Text>git 테스트입니다.</Text>
-      </View>
+      <Input />
+      {/* <Greeting /> */}
     </SafeAreaView>
   );
 };
