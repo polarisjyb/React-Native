@@ -5,10 +5,6 @@ import WelcomeDTG from './src/components/WelcomeDTG/WelcomeDTG';
 import SigninScreen from './src/screens/SignInScreen/SignInScreen';
 import SignUpScreen from './src/screens/SignUpScreen/SignUpScreen';
 
-// import Greeting from './components/Greeting';
-// import Box from './components/Box';
-// import Input from './components/Input';
-
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
