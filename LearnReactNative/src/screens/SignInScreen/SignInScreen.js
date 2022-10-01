@@ -6,6 +6,12 @@ import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
 
+/* 로그인 화면 */
+
+// 비밀번호 찾기
+// 아이디 찾기
+// 필수 입력 항목 구현 ( 미입력시 경고창 띄우기 )
+
 const SignInScreen = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -18,18 +24,6 @@ const SignInScreen = () => {
 
   const onForgotPasswordPressed = () => {
     console.warn('onForgotPasswordPressed');
-  };
-
-  const onSignInNaver = () => {
-    console.warn('Naver');
-  };
-
-  const onSignInGoogle = () => {
-    console.warn('Google');
-  };
-
-  const onSignInKakao = () => {
-    console.warn('Kakao');
   };
 
   const onSignUpPress = () => {

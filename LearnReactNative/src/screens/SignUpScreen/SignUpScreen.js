@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView} from 'react-native';
-import Logo from '../../../assets/images/Logo_1.png';
+import { View, Text, Image, StyleSheet, ScrollView} from 'react-native';
 import WelcomeDTG from '../../components/WelcomeDTG/WelcomeDTG';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
 
+/* 로그인 화면 */
 const SignUpScreen = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#222',
+    color: '#0e1824',
     margin: 10,
   },
   text: {
@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   link: {
-    color: '#222',
+    fontWeight: 'bold',
+    color: '#0e1824',
   }
 });
 
