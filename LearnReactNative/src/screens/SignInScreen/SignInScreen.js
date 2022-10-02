@@ -6,6 +6,8 @@ import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
 
+import {useNavigation} from '@react-navigation/native'
+
 /* 로그인 화면 */
 
 // 비밀번호 찾기
@@ -17,17 +19,22 @@ const SignInScreen = () => {
   const [password, setPassword] = useState('');
 
   const {height} = useWindowDimensions();
+  const navigation = useNavigation();
 
   const onSignInPressed = () => {
-    console.warn('Sign in');
+    // validate user
+    navigation.navigate('HomeScreen');
+    // console.warn('Sign in');
   };
 
   const onForgotPasswordPressed = () => {
-    console.warn('onForgotPasswordPressed');
+    navigation.navigate('ForgotPassword');
+    // console.warn('onForgotPasswordPressed');
   };
 
   const onSignUpPress = () => {
-    console.warn('onSignUpPress');
+    navigation.navigate('SignUp');
+    // console.warn('onSignUpPress');
   }
 
   return (

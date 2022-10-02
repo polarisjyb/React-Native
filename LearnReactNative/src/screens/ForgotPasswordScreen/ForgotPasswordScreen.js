@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 
+import {useNavigation} from '@react-navigation/native'
+
 /* 비밀번호 재설정 -- 이메일 또는 아이디 입력 */
 // 아이디를 입력하면 회원 가입할 때 등록했던 이메일로 인증 코드 발송
 // 이메일을 입력하면 입력한 이메일로 인증 코드 발송
@@ -10,17 +12,18 @@ import CustomButton from '../../components/CustomButton';
 const ForgotPasswordScreen = () => {
   const [username, setUsername] = useState('');
   
+  const navigation = useNavigation();
+
   const onSendPressed = () => {
-    console.warn('onSendPressed');
+    navigation.navigate('NewPassword');
+    // console.warn('onSendPressed');
   };
 
   const onSignInPress = () => {
-    console.warn('onSignInPress')
+    navigation.navigate('SignIn');
+    // console.warn('onSignInPress')
   }
 
-  const onResendPress = () => {
-    console.warn('onResendPress');
-  }
 
 
   return (

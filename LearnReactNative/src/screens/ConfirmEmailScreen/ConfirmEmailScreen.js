@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useTransition} from 'react';
 import { View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
+
+import {useNavigation} from '@react-navigation/native'
 
 /* 회원가입 시 입력한 이메일을 인증하기 위한 인증코드 입력 및 재전송 */
 // 이메일로 받은 인증코드 입력과 재전송
@@ -9,18 +11,22 @@ import CustomButton from '../../components/CustomButton';
 // ? 만약 이메일을 잘못 입력했을 경우 어떻게 해야 할까?
 // 1. 뒤로 가기 or 다시 입력 버튼을 만들어서 다시 입력하게 한다.
 
-// ? 입력하고 나서 example@example.com 메일 주소로 인증코드 전송했다고 알려주는 것 구현
+// ? 해당 example@example.com (메일) 주소로 인증코드 전송했음을 알리는 팝업 창 구현
 
 
 const ConfirmEmailScreen = () => {
   const [code, setCode] = useState('');
   
+  const navigation = useNavigation();
+
   const onConfirmPressed = () => {
-    console.warn('onConfirmPressed');
+    navigation.navigate('HomeScreen');
+    // console.warn('onConfirmPressed');
   };
 
   const onSignInPress = () => {
-    console.warn('onSignInPress')
+    navigation.navigate('SignIn');
+    // console.warn('onSignInPress')
   }
 
   const onResendPress = () => {

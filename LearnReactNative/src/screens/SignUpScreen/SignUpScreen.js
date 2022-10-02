@@ -1,31 +1,40 @@
 import React, {useState} from 'react';
-import { View, Text, Image, StyleSheet, ScrollView} from 'react-native';
-import WelcomeDTG from '../../components/WelcomeDTG/WelcomeDTG';
+import { View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
 
-/* 로그인 화면 */
+import {useNavigation} from '@react-navigation/native'
+
+/* 회원가입 화면 */
+// 이용약관 및 개인정보 보호정책 문서를 볼 수 있도록 페이지 생성?
+
 const SignUpScreen = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
 
+  const navigation = useNavigation();
+
   const onRegisterPressed = () => {
-    console.warn('onRegisterPressed');
+    navigation.navigate('ConfirmEmail');
+    // console.warn('onRegisterPressed');
   };
 
   const onSignInPress = () => {
-    console.warn('onSignInPress')
+    navigation.navigate('SignIn');
+    // console.warn('onSignInPress')
   }
 
   const onTermsOfUsePressed = () => {
-    console.warn('onTermsOfUsePressed');
+    navigation.navigate('onTermsOfUsePressed');
+    // console.warn('onTermsOfUsePressed');
   }
 
   const onPrivacyPressed = () => {
-    console.warn('onPrivacyPressed');
+    navigation.navigate('onPrivacyPressed');
+    // console.warn('onPrivacyPressed');
   }
 
   return (
