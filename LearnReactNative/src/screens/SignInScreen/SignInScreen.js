@@ -42,23 +42,23 @@ const SignInScreen = () => {
       <View style={styles.root}>
         <Image source={Logo} style={[styles.logo, {height: height * 0.3}]} resizeMode="contain"/>
 
-        <CustomInput placeholder="아이디" value={username} setValue={setUsername} />
+        <CustomInput placeholder="Username" value={username} setValue={setUsername} />
         <CustomInput
-        placeholder="비밀번호"
+        placeholder="Password"
         value={password}
         setValue={setPassword}
         secureTextEntry={true}
         />
 
-        <CustomButton text="로그인" onPress={onSignInPressed} />
+        <CustomButton text="Sign in" onPress={onSignInPressed} />
 
-        <CustomButton text="비밀번호 기억 안나지? 나도 기억안나.." onPress={onForgotPasswordPressed} type="TERTIARY" />
+        <CustomButton text="Forgot password?" onPress={onForgotPasswordPressed} type="TERTIARY" />
 
         <SocialSignInButtons />
 
         <CustomButton
-        text="회원가입"
-        // "Don't have an account? Create one"
+        text="Don't have an account? Create one"
+        
         onPress={onSignUpPress}
         type="TERTIARY"
         />
