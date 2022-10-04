@@ -16,6 +16,7 @@ import {useNavigation} from '@react-navigation/native'
 
 const SignInScreen = () => {
   const [username, setUsername] = useState('');
+  console.log(username);
   const [password, setPassword] = useState('');
 
   const {height} = useWindowDimensions();
@@ -58,7 +59,6 @@ const SignInScreen = () => {
 
         <CustomButton
         text="Don't have an account? Create one"
-        
         onPress={onSignUpPress}
         type="TERTIARY"
         />
