@@ -17,10 +17,10 @@ const SignUpScreen = () => {
 
   const navigation = useNavigation();
 
-  const onRegisterPressed = () => {
-    navigation.navigate('ConfirmEmail');
-    // console.warn('onRegisterPressed');
-  };
+  // const onRegisterPressed = () => {
+  //   navigation.navigate('ConfirmEmail');
+  //   // console.warn('onRegisterPressed');
+  // };
 
   const onSignInPress = () => {
     navigation.navigate('SignIn');
@@ -64,7 +64,7 @@ const SignUpScreen = () => {
         secureTextEntry
         />
 
-        <CustomButton text="회원가입" onPress={onRegisterPressed} />
+        <CustomButton text="회원가입" onPress={() => {navigation.navigate('ConfirmEmail')}} />
 
         <Text style={styles.text}>
           회원가입을 통해{' '}
